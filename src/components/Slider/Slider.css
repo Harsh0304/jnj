@@ -1,0 +1,17 @@
+.slides__container{
+    width: 55%;
+}
+
+
+.slider__content img{
+    width: 100%;
+    margin: 0 auto;
+    filter: brightness(.7);
+}
+.slider__content p{
+    font-size: .8rem;
+    margin-top: .5rem;
+}
+.swiper-button-next{
+    width: 2rem;
+}

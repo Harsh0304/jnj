@@ -1,13 +1,196 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Domine:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --color-primary: #ffa500;
+  --color-primary-varient: rgb(223, 196, 145);
+  --color-bg-1: #fff6e6;
+  --color-bg-2: #3d4143;
+  --color-bg-3: #ffc04d;
+  --color-bg-4: rgb(236, 66, 28);
+  --color-black-varient: #3a3a3a;
+  --color-black:#000 ;
+  --color-btn: #4875fe;
+  --color-secondary: #351e43;
+  --color-white: hsl(0, 0%, 90%);
+  --color-light:#e6e9eb;
+  --container-width-lg: 90%;
+  --container-width-md: 95%;
+  --container-width-sm: 96%;
+  --transition: all 400ms ease;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  outline: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Domine", serif;
+  background: var(--color-bg-1) !important ;
+  color: var(--color-black);
+  line-height: 1.7;
+}
+
+h1,
+h2 {
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+h1 {
+  color: var(--color-white);
+  font-size: 2.6rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+
+a {
+  /* color: var(--color-white); */
+  transition: var(--transition);
+}
+
+
+
+.container {
+  width: var(--container-width-lg);
+  margin: 0 auto;
+  max-width: 2160px;
+}
+
+img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+
+.heading h2{
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 2rem !important;
+}
+.btn {
+  display: inline-block;
+  font-size: .8rem;
+  padding: 0.8rem 1.6rem;
+  text-transform: uppercase;
+  background: #068932;
+  color: var(--color-white);
+  font-weight: 500;
+
+  outline: none;
+  border-radius: .5rem;
+  transition: var(--transition);
+  box-shadow: var(--shadow-red);
+  cursor: pointer;
+}
+.active a{
+  color: #068932 !important;
+  font-weight: 700;
+}
+
+
+section {
+  margin-top: 5rem;
+}
+.swiper-button-next,.swiper-button-prev{
+  color: orange !important;
+  font-size: 1.5rem !important;
+}
+
+
+
+.header {
+  margin-top: 5rem;
+  height: 20rem;
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-bg-2);
+}
+.header__container-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: grid;
+  place-items: center;
+  background: #000e17;
+}
+.header__container-bg {
+  position: absolute;
+  width: 100%;
+}
+.header__container-bg img {
+  opacity: 0.5;
+}
+.header__container-content {
+  position: relative;
+  width: 45%;
+  margin: 0 auto;
+  text-align: center;
+}
+.header__container-content h2 {
+  color: var(--color-primary-varient);
+  margin-bottom: 1.5rem;
+}
+.header__container-content p {
+  color: #aec0cd;
+}
+/*===== scroll window===== */
+.window__scroll{
+  background: var(--color-bg-1);
+  color: #000 !important;
+}
+
+.grid__points{
+  margin-top: 8rem;
+}
+.css-1knaqv7-MuiButtonBase-root-MuiButton-root {
+  color: #000 !important;
+}
+/* media queries for medium devices */
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--container-width-md);
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .header__container-content {
+    width: 75%;
+  }
+}
+
+/* media queries for small devices */
+@media screen and (max-width: 600px) {
+  .container{
+    width: var(--container-width-sm);
+  }
+  .heading h2{
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 1.8rem !important;
+  }
+  section {
+    margin-top: 3rem;
+  }
+  .header {
+    height: fit-content;
+  }
+  .header__container-content {
+    width: var(--container-width-md);
+    padding: 3rem 0;
+  }
 }

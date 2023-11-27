@@ -1,0 +1,38 @@
+.nav_container{
+    height: 4rem;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    flex: 1;
+}
+.logo img{
+     width: 7rem;
+     border-radius: 4rem;
+}
+.messsege{
+    flex: 2;
+}
+.messsege h2{
+    font-size: 1.2rem;
+    text-align: start;
+    color: var(--color-bg-4);
+}
+@media screen and (max-width: 600px) {
+    .nav_container{
+        flex-direction: column;
+        /* justify-content: space-between; */
+        margin-top: 1rem;
+        gap: 1.5rem;
+    }
+    .messsege h2{
+        font-size: 1rem;
+        text-align: center;
+    }
+    .logo img{
+        width: 6rem;
+   }
+   .messsege{
+    flex: 2;
+}
+}
